@@ -1,0 +1,106 @@
+.form_container {
+    width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.742);
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(3px);
+}
+
+.form {
+
+    background-image: url('../neon.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0.7rem;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0.3rem 0.4rem 0.2rem rgba(0, 0, 0, 0.51);
+    position: relative;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.form input {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form_close {
+    display: none;
+}
+
+
+
+.password {
+    display: flex;
+    gap: 1rem;
+}
+
+.form_title {
+    text-align: center;
+    color: white;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    font-size: 1.7rem;
+}
+
+.form_x {
+    position: absolute;
+    font-size: 1.4rem;
+    top: 0.5em;
+    right: 0.6em;
+    cursor: pointer;
+}
+
+.form_x:hover {
+    transform: scale(1.2);
+}
+
+.form_section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+    align-items: center;
+
+}
+
+.form_label {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-left: 0.6rem;
+}
+
+.form_input {
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    border-radius: 0.4rem;
+    padding: 0.2rem 1rem;
+}
+
+.form_btn {
+    display: block;
+    width: 60%;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    border: none;
+    background-color: rgb(133, 133, 207);
+    color: white;
+    cursor: pointer;
+    filter: grayscale(0.5);
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 3rem;
+
+}
+
+.form_btn:hover {
+    filter: grayscale(0);
+}

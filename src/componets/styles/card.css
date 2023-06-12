@@ -1,0 +1,118 @@
+  .card {
+      color: rgb(255, 255, 255);
+      display: flex;
+      flex-direction: column;
+      border-radius: 1rem;
+      gap: 1rem;
+      width: 90%;
+      max-width: 340px;
+      padding: 1rem;
+      border: 6px solid #E5E5E5;
+      overflow: hidden;
+      margin-left: auto;
+      margin-right: auto;
+      animation: borderAnimation 5s infinite;
+      box-shadow: 0 0 20px #8a2be2;
+      background-color: rgba(255, 255, 255, 0.91);
+
+  }
+
+  @keyframes borderAnimation {
+      0% {
+          border-color: #acffff;
+      }
+
+      25% {
+          border-color: #acffff;
+      }
+
+      50% {
+          border-color: #acffff;
+      }
+
+      75% {
+          border-color: #acffff;
+      }
+
+      100% {
+          border-color: #acffff;
+      }
+  }
+
+
+
+  .info_container {
+      display: grid;
+      gap: 1.6rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      margin-top: 3rem;
+      padding: 1rem;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+
+  .card_name {
+      padding-bottom: 0.3rem;
+      font-family: Helvetica;
+      font-size: 1.2rem;
+      color: black;
+      font-size: 1.3rem;
+      border-radius: 1rem;
+      border-bottom: 1px solid #ffffff;
+      text-align: center;
+  }
+
+  .card_info {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-top: 1rem;
+      padding: 1rem;
+      color: black;
+  }
+
+  .email {
+      font-size: 1.8rem;
+      color: black;
+  }
+
+  .card_email {
+      display: flex;
+      gap: 0.7rem;
+      font-size: 1rem;
+      align-items: center;
+  }
+
+  .happy {
+      font-size: 1.8rem;
+  }
+
+  .card_birthday {
+      display: flex;
+      gap: 0.7rem;
+      align-items: center;
+  }
+
+  .card_button {
+      border-top: 1px solid #2cd4f6;
+      display: flex;
+      justify-content: end;
+      gap: 1rem;
+      padding: 0.7rem;
+
+  }
+
+  .card_button-delete {
+      border: none;
+      cursor: pointer;
+      font-size: 2rem;
+      color: red;
+  }
+
+  .card_button-edit {
+      cursor: pointer;
+      font-size: 2rem;
+      color: black;
+      ;
+  }
