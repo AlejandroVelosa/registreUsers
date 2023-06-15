@@ -11,33 +11,16 @@
       overflow: hidden;
       margin-left: auto;
       margin-right: auto;
-      animation: borderAnimation 5s infinite;
-      box-shadow: 0 0 20px #8a2be2;
-      background-color: rgba(255, 255, 255, 0.91);
+      box-shadow: 0 0 5px #8a2be2;
+      background-color: rgba(255, 255, 255, 0.921);
 
   }
 
-  @keyframes borderAnimation {
-      0% {
-          border-color: #acffff;
-      }
-
-      25% {
-          border-color: #acffff;
-      }
-
-      50% {
-          border-color: #acffff;
-      }
-
-      75% {
-          border-color: #acffff;
-      }
-
-      100% {
-          border-color: #acffff;
-      }
+  .card:hover {
+      background-color: rgba(255, 255, 255, 0.493);
   }
+
+
 
 
 
@@ -49,18 +32,19 @@
       padding: 1rem;
       margin-left: auto;
       margin-right: auto;
+      font-size: 1rem;
   }
 
 
   .card_name {
       padding-bottom: 0.3rem;
       font-family: Helvetica;
-      font-size: 1.2rem;
-      color: black;
-      font-size: 1.3rem;
+      color: #892be2d3;
+      font-size: 1.8rem;
       border-radius: 1rem;
-      border-bottom: 1px solid #ffffff;
+      border-bottom: 1px solid #8a2be2;
       text-align: center;
+      font-weight: 800;
   }
 
   .card_info {
@@ -70,11 +54,22 @@
       margin-top: 1rem;
       padding: 1rem;
       color: black;
+      background-color: rgba(0, 0, 0, 0.229);
+      border-radius: 1rem;
+      overflow: hidden;
   }
 
   .email {
-      font-size: 1.8rem;
-      color: black;
+      font-size: 1.3rem;
+      color: rgb(255, 255, 255);
+      background-color: rgba(255, 68, 0, 0.684);
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
   }
 
   .card_email {
@@ -82,20 +77,32 @@
       gap: 0.7rem;
       font-size: 1rem;
       align-items: center;
+      padding: 0.5rem;
+      border-radius: 1rem;
+      color: black;
+      font-weight: 300;
   }
 
   .happy {
-      font-size: 1.8rem;
+      font-size: 1.3rem;
+      background-color: rgba(255, 0, 0, 0.551);
+      color: white;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
   }
 
   .card_birthday {
       display: flex;
       gap: 0.7rem;
       align-items: center;
+      font-weight: 300;
   }
 
   .card_button {
-      border-top: 1px solid #2cd4f6;
       display: flex;
       justify-content: end;
       gap: 1rem;
@@ -106,13 +113,62 @@
   .card_button-delete {
       border: none;
       cursor: pointer;
-      font-size: 2rem;
+      font-size: 1.5rem;
       color: red;
   }
 
   .card_button-edit {
       cursor: pointer;
-      font-size: 2rem;
+      font-size: 1.5rem;
       color: black;
       ;
+  }
+
+
+
+  .modal {
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+      background-color: rgba(0, 0, 0, 0.742);
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(3px);
+      padding: 1rem;
+  }
+
+  .modal-content {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      color: black;
+  }
+
+  .modal-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+  }
+
+  .modal-buttons {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 20px;
+  }
+
+  .modal-buttons button {
+      margin-left: 10px;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+      background-color: #eaeaea;
+      cursor: pointer;
+  }
+
+  .modal-buttons button:first-child {
+      background-color: #ff4d4f;
+      color: white;
   }

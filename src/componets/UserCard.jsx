@@ -1,13 +1,19 @@
 
+import { useState } from 'react';
 import './styles/card.css'
 const UserCard = ({ user, deleteUserById, setUpdateInfo, setIsCloseForm }) => {
 
-    const handleDelete = () => {
-        const confirmDelete = window.confirm("¿Estás seguro de eliminar este usuario?");
-        if (confirmDelete) {
-            deleteUserById('/users', user.id);
-        }
+    const [showModal, setShowModal] = useState(false);
+
+
+    const openModal = () => {
+        setShowModal(true)
     }
+
+    const handleDelete = () => {
+        deleteUserById('/users', user.id);
+    }
+
 
     const handleEdit = () => {
         setUpdateInfo(user)
@@ -29,10 +35,21 @@ const UserCard = ({ user, deleteUserById, setUpdateInfo, setIsCloseForm }) => {
                     </li>
                 </ul>
                 <div className='card_button'>
-                    <i onClick={handleDelete} className="uil uil-trash-alt card_button-delete"></i>
+                    <i onClick={openModal} className="uil uil-trash-alt card_button-delete"></i>
                     <i onClick={handleEdit} className="uil uil-edit-alt card_button-edit"></i>
                 </div>
             </div>
+            {showModal && (
+                <div className="modal">
+                    <div className="modal-content">
+                        <h2 className="modal-title">¿Deseas eliminar la información?</h2>
+                        <div className="modal-buttons">
+                            <button onClick={handleDelete}>Eliminar</button>
+                            <button onClick={() => setShowModal(false)}>Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </article>
     )
 }
